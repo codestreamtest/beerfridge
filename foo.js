@@ -130,6 +130,7 @@ export class Commands implements Disposable {
 		return true;
 	}
 
+	// even moar changes after approval
 	@command("applyMarker", { showErrorMessage: "Unable to open comment" })
 	async applyMarker(args: ApplyMarkerCommandArgs): Promise<boolean> {
 		const editor = await this.openWorkingFileForMarkerCore(args.marker);
