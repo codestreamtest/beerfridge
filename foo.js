@@ -77,6 +77,10 @@ export interface OpenReviewCommandArgs {
 	sourceUri?: Uri;
 }
 
+export interface OpenStreamFooBarArgs {
+	streamThread: StreamThread;
+}
+
 export interface OpenStreamCommandArgs {
 	streamThread: StreamThread;
 }
