@@ -19,6 +19,13 @@ export interface InsertTextCommandArgs {
 	indentAfterInsert?: boolean;
 }
 
+export interface ShowReviewDiffCommandArgs {
+	reviewId: string;
+	checkpoint: CSReviewCheckpoint;
+	repoId: string;
+	path: string;
+}
+
 export interface ApplyMarkerCommandArgs {
 	marker: CSMarkerIdentifier;
 }
