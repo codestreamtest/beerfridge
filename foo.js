@@ -13,6 +13,7 @@ import { Command, createCommandDecorator, Strings } from "./system";
 const commandRegistry: Command[] = [];
 const command = createCommandDecorator(commandRegistry);
 
+// coldone to test pr desc
 export interface InsertTextCommandArgs {
 	text: string;
 	marker: CSMarkerIdentifier;
