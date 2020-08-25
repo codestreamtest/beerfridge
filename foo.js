@@ -13,6 +13,22 @@ import { Command, createCommandDecorator, Strings } from "./system";
 const commandRegistry: Command[] = [];
 const command = createCommandDecorator(commandRegistry);
 
+export interface ShowReviewDiffCommandArgs {
+	reviewId: string;
+	checkpoint: CSReviewCheckpoint;
+	repoId: string;
+	path: string;
+}
+
+export interface ShowReviewLocalDiffCommandArgs {
+	repoId: string;
+	path: string;
+	editingReviewId?: string;
+	includeSaved: boolean;
+	includeStaged: boolean;
+	baseSha: string;
+}
+
 export interface InsertTextCommandArgs {
 	text: string;
 	marker: CSMarkerIdentifier;
