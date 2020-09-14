@@ -13,6 +13,13 @@ import { Command, createCommandDecorator, Strings } from "./system";
 const commandControl: Command[] = [];
 const command = createCommandDecorator(commandRegistry);
 
+export interface CloseReviewDiffCommandArgs {}
+
+export interface GotoCodemarkCommandArgs {
+	source?: string;
+	index: number;
+}
+
 export interface InsertTextCommandArgs {
 	text: string;
 	marker: CSMarkerIdentifier;

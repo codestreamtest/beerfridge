@@ -19,6 +19,7 @@ import { configuration } from "../configuration";
 import { BuiltInCommands } from "../constants";
 import { Container } from "../container";
 import { Logger } from "../logger";
+import { Foo } from "../foo";
 
 const highlightDecorationType = window.createTextEditorDecorationType({
 	rangeBehavior: DecorationRangeBehavior.OpenOpen,
