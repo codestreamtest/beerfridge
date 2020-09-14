@@ -10,7 +10,11 @@ import { Container } from "./container";
 import { Logger } from "./logger";
 import { Command, createCommandDecorator, Strings } from "./system";
 
+<<<<<<< HEAD
 const commandCenter: Command[] = [];
+=======
+const commandControl: Command[] = [];
+>>>>>>> master
 const command = createCommandDecorator(commandRegistry);
 
 export interface ShowReviewDiffCommandArgs {
