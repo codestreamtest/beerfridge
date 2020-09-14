@@ -21,6 +21,9 @@ import { Container } from "../container";
 import { Logger } from "../logger";
 import { Foo } from "../foo";
 
+// this is on feature/fail
+// so that I can test moar PRs
+
 const highlightDecorationType = window.createTextEditorDecorationType({
 	rangeBehavior: DecorationRangeBehavior.OpenOpen,
 	backgroundColor: "rgba(127, 127, 127, 0.4)"
