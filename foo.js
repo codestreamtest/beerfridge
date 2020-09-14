@@ -10,40 +10,13 @@ import { Container } from "./container";
 import { Logger } from "./logger";
 import { Command, createCommandDecorator, Strings } from "./system";
 
-<<<<<<< HEAD
-const commandCenter: Command[] = [];
-=======
 const commandControl: Command[] = [];
->>>>>>> master
 const command = createCommandDecorator(commandRegistry);
-
-export interface ShowReviewDiffCommandArgs {
-	reviewId: string;
-	checkpoint: CSReviewCheckpoint;
-	repoId: string;
-	path: string;
-}
-
-export interface ShowReviewLocalDiffCommandArgs {
-	repoId: string;
-	path: string;
-	editingReviewId?: string;
-	includeSaved: boolean;
-	includeStaged: boolean;
-	baseSha: string;
-}
 
 export interface InsertTextCommandArgs {
 	text: string;
 	marker: CSMarkerIdentifier;
 	indentAfterInsert?: boolean;
-}
-
-export interface ShowReviewDiffCommandArgs {
-	reviewId: string;
-	checkpoint: CSReviewCheckpoint;
-	repoId: string;
-	path: string;
 }
 
 export interface ApplyMarkerCommandArgs {
@@ -97,10 +70,6 @@ export interface OpenReviewCommandArgs {
 	sourceUri?: Uri;
 }
 
-export interface OpenStreamFooBarArgs {
-	streamThread: StreamThread;
-}
-
 export interface OpenStreamCommandArgs {
 	streamThread: StreamThread;
 }
@@ -150,7 +119,6 @@ export class Commands implements Disposable {
 		return true;
 	}
 
-	// even moar changes after approval
 	@command("applyMarker", { showErrorMessage: "Unable to open comment" })
 	async applyMarker(args: ApplyMarkerCommandArgs): Promise<boolean> {
 		const editor = await this.openWorkingFileForMarkerCore(args.marker);
