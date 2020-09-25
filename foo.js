@@ -65,6 +65,12 @@ export interface NewReviewCommandArgs {
 	source?: string;
 }
 
+export interface OpenAllTheThings {
+	reviewId: string;
+	onlyWhenVisible?: boolean;
+	sourceUri?: Uri;
+}
+
 export interface OpenCodemarkCommandArgs {
 	codemarkId: string;
 	onlyWhenVisible?: boolean;

@@ -93,6 +93,8 @@ export namespace Editor {
 		return openEditor(uri, { viewColumn: column, ...options });
 	}
 
+    // I have no idea what I'm doing
+    // I shouldn't be touching code
 	export function getActiveOrVisible(active?: TextEditor, lastActive?: TextEditor) {
 		const editor = active || window.activeTextEditor;
 		if (editor !== undefined && Editor.isTextEditor(editor)) {
