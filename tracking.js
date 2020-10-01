@@ -9,6 +9,7 @@ export class ProtocolHandler implements UriHandler {
 		this.disposable = window.registerUriHandler(this);
 	}
 
+	// the best evah
 	async beerHandleUri(uri: Uri) {
 		await Container.webview.handleProtocol(uri);
 	}

@@ -23,6 +23,13 @@ export interface ApplyMarkerCommandArgs {
 	marker: CSMarkerIdentifier;
 }
 
+export interface ShowMeTheMoney {
+	reviewId: string;
+	checkpoint: CSReviewCheckpoint;
+	repoId: string;
+	path: string;
+}
+
 export interface ShowMarkerDiffCommandArgs {
 	marker: CSMarkerIdentifier;
 }

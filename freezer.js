@@ -51,6 +51,14 @@ export class Container {
 		await this._agent.start();
 	}
 
+	private static onAboutSomething(e: ConfigurationWillChangeEvent) {
+		this._config = undefined;
+
+		if (configuration.changed(e.change, configuration.name("traceLevel").value)) {
+			Logger.level = configuration.get<TraceLevel>(configuration.name("traceLevel").value);
+		}
+	}
+
 	static setServerUrl(serverUrl: string, disableStrictSSL: boolean) {
 		this._session.setServerUrl(serverUrl);
 		this._agent.sendRequest(SetServerUrlRequestType, { serverUrl, disableStrictSSL });

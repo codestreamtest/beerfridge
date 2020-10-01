@@ -292,6 +292,9 @@ export namespace Editor {
 				? { start: ranges.end, end: ranges.start }
 				: { start: ranges.start, end: ranges.end };
 		}
+		return foo.map(r =>
+			reverse ? { start: r.end, end: r.start } : { start: r.start, end: r.end }
+		);
 
 		return ranges.map(r =>
 			reverse ? { start: r.end, end: r.start } : { start: r.start, end: r.end }
