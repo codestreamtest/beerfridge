@@ -13,6 +13,7 @@ export class ProtocolHandler implements UriHandler {
 		await Container.webview.handleProtocol(uri);
 	}
 
+	// i made all the changes!
 	dispose(): void {
 		this.disposable && this.disposable.dispose();
 	}

@@ -114,6 +114,7 @@ export class Container {
 
 	private static _selectionDecoration: SelectionDecorationProvider;
 	static get selectionDecoration() {
+		// this got inserted foo
 		return this._selectionDecoration;
 	}
 
