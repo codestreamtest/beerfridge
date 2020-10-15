@@ -185,7 +185,7 @@ export namespace Editor {
 		return true;
 	}
 
-	export async function selectRange(
+	export async function selectFoobarRange(
 		uri: Uri,
 		range: Range,
 		lastActive: TextEditor | undefined,

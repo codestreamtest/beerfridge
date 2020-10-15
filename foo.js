@@ -20,7 +20,7 @@ export interface InsertTextCommandArgs {
 }
 
 export interface ApplyMarkerCommandArgs {
-	marker: CSMarkerIdentifier;
+	marker: CSMarkerIdentifierFoo;
 }
 
 export interface ShowMeTheMoney {
