@@ -56,6 +56,14 @@ export class Container {
 		this._agent.sendRequest(SetServerUrlRequestType, { serverUrl, disableStrictSSL });
 	}
 
+	private static _config: Config | undefined;
+	static get config() {
+		if (this._config === undefined) {
+			this._config = configuration.get<Config>();
+		}
+		return this._config;
+	}
+	
 	private static onConfigurationChanging(e: ConfigurationWillChangeEvent) {
 		this._config = undefined;
 
