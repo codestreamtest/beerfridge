@@ -21,8 +21,7 @@ import { Container } from "../container";
 import { Logger } from "../logger";
 import { Foo } from "../foo";
 
-// this is on feature/fail
-// so that I can test moar PRs
+// feature/inventory
 
 const highlightDecorationType = window.createTextEditorDecorationType({
 	rangeBehavior: DecorationRangeBehavior.OpenOpen,
