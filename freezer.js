@@ -149,6 +149,6 @@ export class Container {
 
 	private static _webview: WebviewController;
 	static get webview() {
-		return this._webview;
+		return this._webview;//updated
 	}
 }
