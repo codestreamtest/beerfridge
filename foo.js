@@ -65,6 +65,12 @@ export interface NewReviewCommandArgs {
 	source?: string;
 }
 
+export interface bigChanges {
+	codemarkId: string;
+	onlyWhenVisible?: boolean;
+	sourceUri?: Uri;
+}
+
 export interface OpenCodemarkCommandArgs {
 	codemarkId: string;
 	onlyWhenVisible?: boolean;
