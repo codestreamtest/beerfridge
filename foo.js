@@ -9,7 +9,7 @@ import { BuiltInCommands } from "./constants";
 import { Container } from "./container";
 import { Logger } from "./logger";
 import { Command, createCommandDecorator, Strings } from "./system";
-
+// fixed the things?
 const commandControl: Command[] = [];
 const command = createCommandDecorator(commandRegistry);
 
