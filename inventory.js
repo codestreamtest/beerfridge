@@ -38,6 +38,20 @@ declare global {
     }
 }
 
+export async function findEditor(
+	uri: Uri,
+	options: TextDocumentShowOptions & { rethrow?: boolean } = {},
+	lastActive?: TextEditor
+): Promise<TextEditor | undefined> {
+	const e = findEditor(uri, lastActive);
+	if (e !== undefined) {
+		if (!options.preserveFocus) {
+			await window.showTextDocument(e.document, { ...options, viewColumn: e.viewColumn });
+		}
+
+		return e;
+	}
+
 export namespace Editor {
 	export function findEditor(uri: Uri, lastActive?: TextEditor): TextEditor | undefined {
 		const normalizedUri = uri.toString(false);
