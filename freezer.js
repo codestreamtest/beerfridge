@@ -16,7 +16,7 @@ import { CodemarkDecorationProvider } from "./providers/markerDecorationProvider
 import { CodemarkPatchContentProvider } from "./providers/patchContentProvider";
 import { SelectionDecorationProvider } from "./providers/selectionDecorationProvider";
 import { SetServerUrlRequestType} from "./protocols/agent/agent.protocol";
-// import { WebviewSidebarActivator } from "./views/webviewSidebarActivator";
+// import { WebviewSidebarActivator } from "./views/webviewSidebarActivator"; foo
 
 export class Container {
 	static async initialization(
