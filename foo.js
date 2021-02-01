@@ -26,6 +26,10 @@ export interface InsertTextCommandArgs {
 	indentAfterInsert?: boolean;
 }
 
+export interface NewCodemarkCommandArgs {
+	source?: string;
+}
+
 export interface ApplyMarkerCommandArgs {
 	marker: CSMarkerIdentifier;
 }
